@@ -1,0 +1,33 @@
+.facultyAssignmentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+  padding:  50px 30px;
+}
+
+.facultyAssignment h1 {
+  font-size: 25px;
+}
+
+.teacherLoad {
+    display: flex;
+    width: 100%;
+    border: red 1px dashed;
+}
+
+.teacherLoadSummary {
+    width: 100%;
+}
+
+.facultyAssignmentSorter {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.facultyAssignmentP2 {
+    border: red 1px dashed;
+    display: flex;
+    flex-direction: column !important;
+}
+
