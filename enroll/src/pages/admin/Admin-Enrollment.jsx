@@ -420,26 +420,27 @@ export const Admin_Enrollment = () => {
         onClose={() => setModalImage(null)}
       />
       <div className="admin-enrollment-container">
-        <div className="stats-container">
-          <div className="stat-card">
-            <h2>{pendingCount}</h2>
-            <p>Pending Applications</p>
+        <div style={{ display: "flex", gap:"16px", padding: "10px"}}>
+          <div className='sort'>
+            <label style={{ marginRight: "0px" }}>School Year</label>
+            <select
+              value={schoolYear}
+              onChange={(e) => setSchoolYear(e.target.value)}
+            >
+              <option>2024-2025</option>
+              <option>2025-2026</option>
+            </select>
           </div>
-          <div className="stat-card">
-            <h2>{totalEnrolled}</h2>
-            <p>Total Enrolled Students</p>
+          <div className="stats-container">
+            <div className="stat-card">
+              <h2>{pendingCount}</h2>
+              <p className='cardPending'>Pending Applications</p>
+            </div>
+            <div className="stat-card">
+              <h2>{totalEnrolled}</h2>
+              <p className='cardEnrolled'>Total Enrolled Students</p>
+            </div>
           </div>
-        </div>
-
-        <div style={{ marginBottom: 12 }}>
-          <label style={{ marginRight: 8 }}>School Year</label>
-          <select
-            value={schoolYear}
-            onChange={(e) => setSchoolYear(e.target.value)}
-          >
-            <option>2024-2025</option>
-            <option>2025-2026</option>
-          </select>
         </div>
 
         <div className="enrollmentFilter">
@@ -526,14 +527,14 @@ export const Admin_Enrollment = () => {
           <table className="enrollment-table">
             <thead>
               <tr>
-                <th></th>
-                <th scope="col">#</th>
+                <th className='column1'></th>
+                <th className="column2"scope="col">#</th>
                 <th scope="col">Application Date</th>
                 <th scope="col">Name</th>
                 <th scope="col">LRN</th>
                 <th scope="col">Student Status</th>
                 <th scope="col">Grade Level</th>
-                <th scope="col">PSA/Birthcert</th>
+                <th scope="col">PSA /   Birthcert</th>
                 <th scope="col">Report Card</th>
                 <th scope="col">SF10</th>
                 <th scope="col">Status</th>
@@ -552,7 +553,7 @@ export const Admin_Enrollment = () => {
               ) : (
                 pageRows.map((r, index) => (
                   <tr key={r.enrollment_id}>
-                    <td>
+                    <td className="column1">
                       {r.status === 'pending' && (
                         <input
                           type="checkbox"
@@ -561,7 +562,7 @@ export const Admin_Enrollment = () => {
                         />
                       )}
                     </td>
-                    <td>{index + 1}</td>
+                    <td className="column2">{index + 1}</td>
                     <td>
                       {r.date ? new Date(r.date).toLocaleDateString() : '—'}
                     </td>
@@ -574,27 +575,27 @@ export const Admin_Enrollment = () => {
                     <td>
                       {r.hasPSA
                         ? (() => {
-                            const studId = studentByApplicant.get(
-                              r.applicant_id
-                            )?.student_id;
-                            const docsArr = docsByStudent.get(studId) || [];
-                            const doc = docsArr.find(
-                              (d) => d.document_type === 'psa_birth_cert'
-                            );
-                            if (!doc) return '—';
-                            const url = getPublicUrl(doc.file_path);
-                            return (
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setModalImage(url);
-                                }}
-                              >
-                                view
-                              </a>
-                            );
-                          })()
+                          const studId = studentByApplicant.get(
+                            r.applicant_id
+                          )?.student_id;
+                          const docsArr = docsByStudent.get(studId) || [];
+                          const doc = docsArr.find(
+                            (d) => d.document_type === 'psa_birth_cert'
+                          );
+                          if (!doc) return '—';
+                          const url = getPublicUrl(doc.file_path);
+                          return (
+                            <a
+                              href="#"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setModalImage(url);
+                              }}
+                            >
+                              view
+                            </a>
+                          );
+                        })()
                         : '—'}
                     </td>
 
@@ -602,27 +603,27 @@ export const Admin_Enrollment = () => {
                     <td>
                       {r.hasCard
                         ? (() => {
-                            const studId = studentByApplicant.get(
-                              r.applicant_id
-                            )?.student_id;
-                            const docsArr = docsByStudent.get(studId) || [];
-                            const doc = docsArr.find(
-                              (d) => d.document_type === 'report_card'
-                            );
-                            if (!doc) return '—';
-                            const url = getPublicUrl(doc.file_path);
-                            return (
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setModalImage(url);
-                                }}
-                              >
-                                view
-                              </a>
-                            );
-                          })()
+                          const studId = studentByApplicant.get(
+                            r.applicant_id
+                          )?.student_id;
+                          const docsArr = docsByStudent.get(studId) || [];
+                          const doc = docsArr.find(
+                            (d) => d.document_type === 'report_card'
+                          );
+                          if (!doc) return '—';
+                          const url = getPublicUrl(doc.file_path);
+                          return (
+                            <a
+                              href="#"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setModalImage(url);
+                              }}
+                            >
+                              view
+                            </a>
+                          );
+                        })()
                         : '—'}
                     </td>
 
@@ -630,27 +631,27 @@ export const Admin_Enrollment = () => {
                     <td>
                       {r.hasSF10
                         ? (() => {
-                            const studId = studentByApplicant.get(
-                              r.applicant_id
-                            )?.student_id;
-                            const docsArr = docsByStudent.get(studId) || [];
-                            const doc = docsArr.find(
-                              (d) => d.document_type === 'sf10'
-                            );
-                            if (!doc) return '—';
-                            const url = getPublicUrl(doc.file_path);
-                            return (
-                              <a
-                                href="#"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  setModalImage(url);
-                                }}
-                              >
-                                view
-                              </a>
-                            );
-                          })()
+                          const studId = studentByApplicant.get(
+                            r.applicant_id
+                          )?.student_id;
+                          const docsArr = docsByStudent.get(studId) || [];
+                          const doc = docsArr.find(
+                            (d) => d.document_type === 'sf10'
+                          );
+                          if (!doc) return '—';
+                          const url = getPublicUrl(doc.file_path);
+                          return (
+                            <a
+                              href="#"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setModalImage(url);
+                              }}
+                            >
+                              view
+                            </a>
+                          );
+                        })()
                         : '—'}
                     </td>
 

@@ -259,9 +259,12 @@ export const Register_ph1 = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                     />
-                    {errorMessages.lastName && (
+                    <div className='errorContainer'>
+                      {errorMessages.lastName && (
                       <p className="error">{errorMessages.lastName}</p>
                     )}
+                    </div>
+                    
                   </div>
 
                   <div className="inputGroup1">
@@ -274,9 +277,11 @@ export const Register_ph1 = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.firstName && (
                       <p className="error">{errorMessages.firstName}</p>
                     )}
+                    </div>
                   </div>
 
                   <div className="inputGroup1">
@@ -288,9 +293,11 @@ export const Register_ph1 = () => {
                       value={formData.middleName}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.middleName && (
                       <p className="error">{errorMessages.middleName}</p>
                     )}
+                  </div>
                   </div>
 
                   <div className="inputGroup1">
@@ -304,9 +311,11 @@ export const Register_ph1 = () => {
                       value={formData.suffix}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.suffix && (
                       <p className="error">{errorMessages.suffix}</p>
                     )}
+                  </div>
                   </div>
                 </div>
 
@@ -321,9 +330,11 @@ export const Register_ph1 = () => {
                       value={formData.birthDate}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.birthDate && (
                       <p className="error">{errorMessages.birthDate}</p>
                     )}
+                  </div>
                   </div>
 
                   <div className="inputGroup2">
@@ -337,9 +348,11 @@ export const Register_ph1 = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.email && (
                       <p className="error">{errorMessages.email}</p>
                     )}
+                  </div>
                   </div>
                 </div>
 
@@ -354,9 +367,11 @@ export const Register_ph1 = () => {
                       value={formData.password}
                       onChange={handleInputChange}
                     />
+                    <div className='errorContainer'>
                     {errorMessages.password && (
                       <p className="error">{errorMessages.password}</p>
                     )}
+                    </div>
 
                     <i
                       className={`fa ${showPassword ? 'fa-eye' : 'fa-eye-slash'}`}
@@ -365,7 +380,7 @@ export const Register_ph1 = () => {
                       style={{
                         position: 'absolute',
                         right: '12px',
-                        top: '45%',
+                        top: '30%',
                         transform: 'translateY(50%)',
                         fontSize: '17px',
                         color: showPassword ? '#248041' : '#555',
@@ -398,7 +413,7 @@ export const Register_ph1 = () => {
                       style={{
                         position: 'absolute',
                         right: '12px',
-                        top: '45%',
+                        top: '30%',
                         transform: 'translateY(50%)',
                         fontSize: '17px',
                         color: showConfirmPassword ? '#248041' : '#555',

@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.errorContainer {
+  height: 30px;
+}
+
 .registerBackground {
   background-size: cover;
   background-position: center;

@@ -20,6 +20,8 @@ import { Teacher_Homepage } from './pages/teacher/Teacher_Homepage';
 import { Teacher_Grading } from './pages/teacher/Teacher_Grading';
 import { Teacher_Evaluation } from './pages/teacher/Teacher_Evaluation';
 import { Teacher_Schedule } from './pages/teacher/Teacher_Schedule';
+import { Applicant__Profile } from './pages/applicant/Applicant__Profile';
+import './components/table/table.css'
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
         <Route path="Applicant_Homepage" element={<Applicant_Homepage />} />
         <Route path="Applicant_Enroll1" element={<Applicant_Enroll1 />} />
         <Route path="Applicant_Profile" element={<Applicant_Profile />} />
+        <Route path="Applicant__Profile" element={<Applicant__Profile />} />
       </Route>
       <Route element={<ProtectedRoute allowRoles={['student']} />}>
         <Route path="/Student_Homepage" element={<Student_Homepage />} />
