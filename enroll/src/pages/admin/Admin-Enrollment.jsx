@@ -455,7 +455,7 @@ export const Admin_Enrollment = () => {
           </div>
 
           <div className="enrollmentFilters">
-            <div className="filter">
+            <div className="sort">
               <label>Application Date</label>
               <select
                 value={dateSort}
@@ -465,7 +465,7 @@ export const Admin_Enrollment = () => {
                 <option>Oldest</option>
               </select>
             </div>
-            <div className="filter">
+            <div className="sort">
               <label>Select Grade Level</label>
               <select
                 value={gradeFilter}
@@ -477,7 +477,7 @@ export const Admin_Enrollment = () => {
                 ))}
               </select>
             </div>
-            <div className="filter">
+            <div className="sort">
               <label>Gender</label>
               <select
                 value={genderFilter}

@@ -431,7 +431,7 @@ export const Admin_Grades = () => {
           </div>
         </div>
         <div className="gradingSorter">
-          <div className="gradingSorter-quarter">
+          <div className="sort">
             <label>Quarter</label>
             <select
               value={quarter}
@@ -444,7 +444,7 @@ export const Admin_Grades = () => {
               <option value="4">4th</option>
             </select>
           </div>
-          <div className="gradingSorter-grade">
+          <div className="sort">
             <label>Grade Level</label>
             <select
               value={gradeFilter}
@@ -457,7 +457,7 @@ export const Admin_Grades = () => {
               ))}
             </select>
           </div>
-          <div className="gradingSorter-section">
+          <div className="sort">
             <label>Section</label>
             <select
               value={sectionFilter}
@@ -472,7 +472,7 @@ export const Admin_Grades = () => {
               ))}
             </select>
           </div>
-          <div className="gradingSorter-subject">
+          <div className="sort">
             <label>Faculty/Subject</label>
             <select
               value={subjectFilter}
@@ -487,7 +487,7 @@ export const Admin_Grades = () => {
               ))}
             </select>
           </div>
-          <div className="gradingSorter-status">
+          <div className="sort">
             <label>Status</label>
             <select
               value={statusFilter}

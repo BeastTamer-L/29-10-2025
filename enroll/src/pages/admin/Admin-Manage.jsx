@@ -283,7 +283,7 @@ export const Admin_Manage = () => {
             />
           </div>
 
-          <div className="userManageSort">
+          <div className="sort">
             <label>Select Users</label>
             <select
               value={filters.role}
@@ -299,7 +299,7 @@ export const Admin_Manage = () => {
             </select>
           </div>
 
-          <div className="userManageSort">
+          <div className="sort">
             <label>Status</label>
             <select
               value={filters.status}
