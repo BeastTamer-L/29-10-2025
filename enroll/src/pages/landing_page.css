@@ -176,6 +176,7 @@
 }
 
 .btn {
+  border: 1px solid red;
   margin-top: 50px;
   width: 200px;
   height: 45px;

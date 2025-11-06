@@ -259,12 +259,11 @@ export const Register_ph1 = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
+                    <div className="errorContainer">
                       {errorMessages.lastName && (
-                      <p className="error">{errorMessages.lastName}</p>
-                    )}
+                        <p className="error">{errorMessages.lastName}</p>
+                      )}
                     </div>
-                    
                   </div>
 
                   <div className="inputGroup1">
@@ -277,10 +276,10 @@ export const Register_ph1 = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.firstName && (
-                      <p className="error">{errorMessages.firstName}</p>
-                    )}
+                    <div className="errorContainer">
+                      {errorMessages.firstName && (
+                        <p className="error">{errorMessages.firstName}</p>
+                      )}
                     </div>
                   </div>
 
@@ -293,11 +292,11 @@ export const Register_ph1 = () => {
                       value={formData.middleName}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.middleName && (
-                      <p className="error">{errorMessages.middleName}</p>
-                    )}
-                  </div>
+                    <div className="errorContainer">
+                      {errorMessages.middleName && (
+                        <p className="error">{errorMessages.middleName}</p>
+                      )}
+                    </div>
                   </div>
 
                   <div className="inputGroup1">
@@ -311,11 +310,11 @@ export const Register_ph1 = () => {
                       value={formData.suffix}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.suffix && (
-                      <p className="error">{errorMessages.suffix}</p>
-                    )}
-                  </div>
+                    <div className="errorContainer">
+                      {errorMessages.suffix && (
+                        <p className="error">{errorMessages.suffix}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -330,11 +329,11 @@ export const Register_ph1 = () => {
                       value={formData.birthDate}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.birthDate && (
-                      <p className="error">{errorMessages.birthDate}</p>
-                    )}
-                  </div>
+                    <div className="errorContainer">
+                      {errorMessages.birthDate && (
+                        <p className="error">{errorMessages.birthDate}</p>
+                      )}
+                    </div>
                   </div>
 
                   <div className="inputGroup2">
@@ -348,11 +347,11 @@ export const Register_ph1 = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.email && (
-                      <p className="error">{errorMessages.email}</p>
-                    )}
-                  </div>
+                    <div className="errorContainer">
+                      {errorMessages.email && (
+                        <p className="error">{errorMessages.email}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -367,10 +366,10 @@ export const Register_ph1 = () => {
                       value={formData.password}
                       onChange={handleInputChange}
                     />
-                    <div className='errorContainer'>
-                    {errorMessages.password && (
-                      <p className="error">{errorMessages.password}</p>
-                    )}
+                    <div className="errorContainer">
+                      {errorMessages.password && (
+                        <p className="error">{errorMessages.password}</p>
+                      )}
                     </div>
 
                     <i
@@ -389,7 +388,6 @@ export const Register_ph1 = () => {
                       }}
                       title={showPassword ? 'Hide password' : 'Show password'}
                     ></i>
-
                   </div>
 
                   <div className="inputGroup3" style={{ position: 'relative' }}>
@@ -426,10 +424,8 @@ export const Register_ph1 = () => {
                           : 'Show confirm password'
                       }
                     />
-
                   </div>
                 </div>
-
 
                 <div className="button1">
                   <button
@@ -443,11 +439,10 @@ export const Register_ph1 = () => {
               </form>
             </div>
           </div>
-          <div className='backToLogin'>
-            <p>Already have an account? { }
-              <Link to="/">
-                Login here.
-              </Link>
+          <div className="backToLogin">
+            <p>
+              Already have an account? {}
+              <Link to="/">Login here.</Link>
             </p>
           </div>
         </div>

@@ -94,7 +94,7 @@
 }
 
 .userManageTableContainer {
-  background-color: #F5F6F6;
+  background-color: #f5f6f6;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -118,7 +118,6 @@
   word-wrap: break-word;
 }
 
-/* Narrow checkbox and index columns */
 .user-manage-table th.column1,
 .user-manage-table td.column1 {
   width: 35px;
@@ -132,8 +131,6 @@
   text-align: center;
   padding: 6px;
 }
-
-
 
 .userManageTableContainer td.actionsCell {
   display: flex;

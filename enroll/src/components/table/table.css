@@ -1,4 +1,3 @@
-/* 🌍 GLOBAL TABLE STYLES */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -46,7 +45,6 @@ tr:hover {
   transition: background-color 0.2s;
 }
 
-/* Optional: Table titles */
 .table-title {
   font-size: 18px;
   font-weight: 600;

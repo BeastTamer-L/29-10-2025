@@ -233,7 +233,6 @@
   }
 }
 
-
 .folderSelect {
   padding: 24px;
   animation: fadeIn 0.3s ease-in-out;
@@ -289,15 +288,15 @@
 }
 
 .grade8 .folder-icon {
-  color: #FFF833;
+  color: #fff833;
 }
 
 .grade9 .folder-icon {
-  color: #E44343;
+  color: #e44343;
 }
 
 .grade10 .folder-icon {
-  color: #2B7FED;
+  color: #2b7fed;
 }
 
 @keyframes fadeIn {

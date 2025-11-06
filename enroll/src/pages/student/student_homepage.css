@@ -53,6 +53,7 @@
     text-align: left;
     background-color: #fbc74f37;
     border-radius: 10px;
+     position: relative;
 }
 
 .notice{
@@ -71,8 +72,10 @@
     font-size: 16px;
 }
 
-.buttonContainer {
-    padding: 30px 25px;
-    display: flex;
-    justify-content: flex-end;
+.buttonContainerCard {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }

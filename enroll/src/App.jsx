@@ -20,27 +20,30 @@ import { Teacher_Homepage } from './pages/teacher/Teacher_Homepage';
 import { Teacher_Grading } from './pages/teacher/Teacher_Grading';
 import { Teacher_Evaluation } from './pages/teacher/Teacher_Evaluation';
 import { Teacher_Schedule } from './pages/teacher/Teacher_Schedule';
-import { Applicant__Profile } from './pages/applicant/Applicant__Profile';
-import './components/table/table.css'
-
+import ResetPassword from './pages/ResetPassword';
+import { Student_Profile } from './pages/student/Student_Profile';
 function App() {
   return (
     <Routes>
       {/* Public routes */}
       <Route path="/" element={<Landing_page />} />
       <Route path="Register_ph1" element={<Register_ph1 />} />
-
+      <Route path="/reset-password" element={<ResetPassword />} />
       {/* Protected routes for applicants only */}
       <Route element={<ProtectedRoute allowRoles={['applicant']} />}>
         <Route path="Applicant_Homepage" element={<Applicant_Homepage />} />
         <Route path="Applicant_Enroll1" element={<Applicant_Enroll1 />} />
         <Route path="Applicant_Profile" element={<Applicant_Profile />} />
-        <Route path="Applicant__Profile" element={<Applicant__Profile />} />
       </Route>
       <Route element={<ProtectedRoute allowRoles={['student']} />}>
         <Route path="/Student_Homepage" element={<Student_Homepage />} />
         <Route path="/Student_Schedule" element={<Student_Schedule />} />
         <Route path="/Student_Grades" element={<Student_Grades />} />
+        <Route
+          path="/Student_Enrollment/step-2"
+          element={<Student_Enrollment />}
+        />
+        <Route path="/Student_Profile" element={<Student_Profile />} />
         <Route path="/Student_Enrollment" element={<Student_Enrollment />} />
       </Route>
       <Route element={<ProtectedRoute allowRoles={['teacher']} />}>

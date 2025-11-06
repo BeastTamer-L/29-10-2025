@@ -602,10 +602,10 @@ export const Admin_Grades = () => {
             </div>
           )}
 
-          <table className='grading-table'>
+          <table className="grading-table">
             <thead>
               <tr>
-                <th className='column1'></th>
+                <th className="column1"></th>
                 <th>Name of teacher</th>
                 <th>Advisers</th>
                 <th>Grade Level</th>
@@ -616,7 +616,6 @@ export const Admin_Grades = () => {
                 <th>Encoding Window</th>
                 <th>Actions</th>
               </tr>
-
             </thead>
             <tbody>
               {loading ? (
@@ -632,7 +631,7 @@ export const Admin_Grades = () => {
                   const enc = isUnlocked(r.grade_level) ? 'Unlocked' : 'Locked';
                   return (
                     <tr key={r.key}>
-                      <td className='column1'>
+                      <td className="column1">
                         <input
                           type="checkbox"
                           checked={selectedRows.has(r.teacher_subject_id)}
@@ -733,7 +732,7 @@ export const Admin_Grades = () => {
                         try {
                           const userId = Number(
                             localStorage.getItem('user_id') ||
-                            localStorage.getItem('app_user_id')
+                              localStorage.getItem('app_user_id')
                           );
                           const { error } = await supabase
                             .from('encoding_windows')
@@ -864,7 +863,7 @@ export const Admin_Grades = () => {
                       try {
                         const userId = Number(
                           localStorage.getItem('user_id') ||
-                          localStorage.getItem('app_user_id')
+                            localStorage.getItem('app_user_id')
                         );
                         const { error } = await supabase
                           .from('encoding_windows')

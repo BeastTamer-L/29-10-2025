@@ -647,8 +647,7 @@ export const Teacher_Scheduling_Card = ({
               </tbody>
             </table>
 
-            <div
-              className="editSchedButtonContainer">
+            <div className="editSchedButtonContainer">
               <button className="update-btn" onClick={handleUpdate}>
                 Update
               </button>

@@ -541,7 +541,7 @@ export const Teacher_Grading = () => {
                     <p>{c.room_label}</p>
                   </div>
                 </div>
-                <div className="buttonContainer">
+                <div className="viewMasterListButtonContainer">
                   <button
                     onClick={async () => {
                       await loadRosterAndGrades(c);

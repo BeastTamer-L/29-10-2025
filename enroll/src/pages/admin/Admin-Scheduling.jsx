@@ -495,11 +495,11 @@ export const Admin_Scheduling = () => {
             (s) => s.section_id === section.section_id
           )?.adviser_id
             ? allTeachers.find(
-              (t) =>
-                t.teacher_id ===
-                sections.find((s) => s.section_id === section.section_id)
-                  ?.adviser_id
-            )?.department_id
+                (t) =>
+                  t.teacher_id ===
+                  sections.find((s) => s.section_id === section.section_id)
+                    ?.adviser_id
+              )?.department_id
             : null;
 
           const requiredSubjectIds = buildRequiredSubjectsForSection(
@@ -963,10 +963,11 @@ export const Admin_Scheduling = () => {
 
         <div className="analytics-grid">
           <div
-            className={`analytics-card ${analytics.incompleteSections > 0
-              ? 'analytics-card--warning'
-              : 'analytics-card--success'
-              }`}
+            className={`analytics-card ${
+              analytics.incompleteSections > 0
+                ? 'analytics-card--warning'
+                : 'analytics-card--success'
+            }`}
           >
             <div className="analytics-card__label">
               Sections Missing Teachers
@@ -980,10 +981,11 @@ export const Admin_Scheduling = () => {
           </div>
 
           <div
-            className={`analytics-card ${analytics.scheduleConflicts > 0
-              ? 'analytics-card--error'
-              : 'analytics-card--success'
-              }`}
+            className={`analytics-card ${
+              analytics.scheduleConflicts > 0
+                ? 'analytics-card--error'
+                : 'analytics-card--success'
+            }`}
           >
             <div className="analytics-card__label">Schedule Conflicts</div>
             <div className="analytics-card__value">
@@ -1143,7 +1145,6 @@ export const Admin_Scheduling = () => {
         <h2 className="folder-title">Grade Level Folders</h2>
 
         <div className="folder-grid">
-
           <div className="folder-card grade7">
             <i className="fas fa-folder folder-icon"></i>
             <h3>Grade 7</h3>
@@ -1159,15 +1160,12 @@ export const Admin_Scheduling = () => {
             <h3>Grade 9</h3>
           </div>
 
-
           <div className="folder-card grade10">
             <i className="fas fa-folder folder-icon"></i>
             <h3>Grade 10</h3>
           </div>
-
         </div>
       </div>
-
 
       <TeacherLoadConfig
         show={showLoadConfig}
