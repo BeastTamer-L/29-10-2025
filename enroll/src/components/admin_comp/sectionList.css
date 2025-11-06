@@ -2,6 +2,8 @@
 .sectionList {
   padding: 80px 40px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionListCards {

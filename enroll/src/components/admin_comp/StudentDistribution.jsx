@@ -341,7 +341,7 @@ const StudentDistribution = () => {
             <ResponsiveContainer>
               <BarChart
                 data={sortedData}
-                margin={{ top: 20, right: 20, left: 4 }}
+                margin={{ top: 20, right: 20, left: -30 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="grade" />
@@ -368,7 +368,7 @@ const StudentDistribution = () => {
             <ResponsiveContainer>
               <BarChart
                 data={sortedData}
-                margin={{ top: 20, right: 20, left: 4 }}
+                margin={{ top: 20, right: 20, left: -30 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="grade" />
@@ -398,7 +398,7 @@ const StudentDistribution = () => {
             <ResponsiveContainer>
               <BarChart
                 data={sortedData}
-                margin={{ top: 20, right: 20, left: 4 }}
+                margin={{ top: 20, right: 20, left: -30 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="grade" />

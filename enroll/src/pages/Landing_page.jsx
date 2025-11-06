@@ -172,18 +172,20 @@ export const Landing_page = () => {
               <div className="login_Form_Box">
                 <form onSubmit={handleLogin}>
                   <div className="input_Box">
-                    <input
+                    <label>Login ID</label>
+                    <input placeholder='Enter Applicant ID / Student ID / Email'
                       name="id"
                       value={form.id}
                       onChange={handleInputChange}
                       required
                       autoComplete="username"
                     />
-                    <label>Applicant ID / Student ID / Email</label>
+                    
                   </div>
 
                   <div className="input_Box">
-                    <input
+                    <label>Password</label>
+                    <input placeholder='Enter Password'
                       type={showPassword ? 'text' : 'password'}
                       name="password"
                       value={form.password}
@@ -191,7 +193,7 @@ export const Landing_page = () => {
                       required
                       autoComplete="current-password"
                     />
-                    <label>Password</label>
+                    
                     <i
                       className={`fa ${showPassword ? 'fa-eye' : 'fa-eye-slash'}`}
                       aria-hidden="true"
@@ -208,20 +210,8 @@ export const Landing_page = () => {
                   </div>
 
                   <div className="passoption">
-                    <p>
-                      <button
-                        type="button"
-                        onClick={() => setForgotOpen(true)}
-                        style={{
-                          background: 'none',
-                          border: 'none',
-                          color: '#0b73ff',
-                          cursor: 'pointer',
-                          padding: 0,
-                        }}
-                      >
-                        Forgot Password?
-                      </button>
+                    <p onClick={() => setForgotOpen(true)}>
+                      Forgot Password?
                     </p>
                   </div>
 

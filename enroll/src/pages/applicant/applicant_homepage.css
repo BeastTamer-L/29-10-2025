@@ -105,7 +105,6 @@
 }
 
 .enroll-actions {
-  border: #1e6c36 1px dashed;
   display: flex;
   gap: 10px;
 }

@@ -7,6 +7,8 @@ import { supabase } from '../../supabaseClient';
 import emailjs from 'emailjs-com';
 import { ImageModal } from '../../components/modals/ImageModal';
 import EnrollmentSuccessModal from '../../components/modals/EnrollmentSuccessModal';
+import { GridLoader } from 'react-spinners';
+import { LoadingPopup } from '../../components/loaders/LoadingPopup';
 
 const GRADES = ['Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'];
 const normalizeSY = (s) => (s || '').replace(/[–—−]/g, '-').trim();
@@ -866,6 +868,12 @@ export const Admin_Enrollment = () => {
   };
   return (
     <>
+      <LoadingPopup
+        show={loading}
+        message="Loading Please Wait..."
+        Loader={GridLoader}
+        color="#3FB23F"
+      />
       <Header userRole="admin" />
       <Navigation_Bar userRole="super_admin" activeSection="enrollment" />
 
@@ -906,7 +914,7 @@ export const Admin_Enrollment = () => {
               {loadingWindow ? '…' : windowRow?.is_open ? 'OPEN' : 'CLOSED'}
             </h2>
             <p>Enrollment Status</p>
-            <div style={{ display: 'flex', gap: 8, marginTop: 8,alignItems:"center",justifyContent:"center" }}>
+            <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: "center", justifyContent: "center" }}>
               <button onClick={openWindowModal}>Open Enrollment</button>
               <button
                 onClick={() => setOpenClosed(!windowRow?.is_open)}
@@ -1305,7 +1313,7 @@ export const Admin_Enrollment = () => {
             <div className='sort' style={{ marginTop: 12, display: 'grid', gap: 12 }}>
               <label style={{ display: 'grid', gap: 6 }}>
                 <span>Enrollment Start</span>
-                <input
+                <input className='calendar'
                   type="datetime-local"
                   value={winStart}
                   onChange={(e) => setWinStart(e.target.value)}
@@ -1313,7 +1321,7 @@ export const Admin_Enrollment = () => {
               </label>
               <label style={{ display: 'grid', gap: 6 }}>
                 <span>Enrollment End</span>
-                <input
+                <input className='calendar'
                   type="datetime-local"
                   value={winEnd}
                   onChange={(e) => setWinEnd(e.target.value)}
@@ -1343,7 +1351,7 @@ export const Admin_Enrollment = () => {
                 flexWrap: 'wrap',
               }}
             >
-              <button style={{border:"1px solid black",color:"black", backgroundColor:"#fff"}} onClick={closeWindowModal}>Cancel</button>
+              <button style={{ border: "1px solid black", color: "black", backgroundColor: "#fff" }} onClick={closeWindowModal}>Cancel</button>
 
               {/* Save + Open now */}
               <button
